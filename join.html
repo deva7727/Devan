@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMB PLAYS Minecraft Server</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #636363;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #acacac;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(73, 73, 73, 0.2);
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #000000;
+}
+
+h2 {
+    color: #000000;
+}
+
+.server-info, .join-instructions {
+    margin-bottom: 30px;
+}
+
+.ip-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ip-label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    flex: 1;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+ol {
+    line-height: 1.6;
+}
+
+.copy-alert {
+    margin-top: 10px;
+    font-size: 16px;
+    display: inline-block; /* Ensure it displays correctly below the button */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to DMB PLAYS Minecraft Server!</h1>
+            <p>Join us for endless adventures and creativity!</p>
+        </header>
+
+        <section class="server-info">
+            <h2>Server Information</h2>
+            <div class="ip-container">
+                <p class="ip-label">Server IP:</p>
+                <input type="text" id="server-ip" value="mc.dmbplays.me:25456" readonly>
+                <button onclick="copyIP()">Copy IP</button>
+            </div>
+            <p id="copy-alert" class="copy-alert"></p>
+        </section>
+
+        <section class="join-instructions">
+            <h2>How to Join the Server</h2>
+            <ol>
+                <li>Open Minecraft and log in to your account.</li>
+                <li>Click on the "Multiplayer" option in the main menu.</li>
+                <li>Click on the "Add Server" button.</li>
+                <li>In the "Server Name" field, enter any name you prefer (e.g., DMB PLAYS).</li>
+                <li>In the "Server Address" field, enter: <strong>mc.dmbplays.me:25456</strong>.</li>
+                <li>Click "Done" to save the server information.</li>
+                <li>Find the server in your server list and click "Join Server"!</li>
+            </ol>
+        </section>
+    </div>
+
+    <script>
+        function copyIP() {
+            const ipInput = document.getElementById('server-ip');
+            ipInput.select();
+            document.execCommand('copy');
+
+            // Show copied message
+            const alertMessage = document.getElementById('copy-alert');
+            alertMessage.textContent = 'Copied!';
+            alertMessage.style.color = 'green';
+            alertMessage.style.fontWeight = 'bold';
+        }
+    </script>
+</body>
+</html>

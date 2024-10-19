@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    text-align: center;
+}
+
+.title {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    background-color: #00ff00;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    background-color: #333;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Leaderboard Section */
+#leaderboard {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+}
+
+#leaderboard h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#player-leaderboard {
+    list-style: none;
+    padding: 0;
+}
+
+#player-leaderboard li {
+    font-size: 1.5rem;
+    background-color: #444;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .animated-button {
+        font-size: 1rem;
+    }
+
+    #player-leaderboard li {
+        width: 100%;
+    }
+}
+
+.hero {
+    background: url('IMG.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: backgroundMove 20s infinite linear;
+}
+
+/* Adding subtle motion to the background like a video */
+@keyframes backgroundMove {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: 10% 10%;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+.title {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    background-color: #00ff00;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
+
+
+.feature {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+}
+
+.feature h2 {
+    color: #4CAF50;
+}
+
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 500px; /* Adjust max width as necessary */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-top: 20px;
+}
+
+.img-container1 img {
+    width: 30%; /* Adjust width as needed */
+    max-width: 300px; /* Sets a max width */
+    margin: 10px; /* Adds some space around the images */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
