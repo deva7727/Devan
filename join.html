@@ -91,8 +91,14 @@ ol {
         <section class="server-info">
             <h2>Server Information</h2>
             <div class="ip-container">
-                <p class="ip-label">Server IP:</p>
+                <p class="ip-label"> JAVA Server IP:</p>
                 <input type="text" id="server-ip" value="mc.dmbplays.me:25456" readonly>
+                <button onclick="copyIP()">Copy IP</button>
+            </div>
+
+             <div class="ip-container">
+                <p class="ip-label"> Bedrock/Pocket Server IP:</p>
+                <input type="text" id="server-ip" value="mc.dmbplays.me:2250" readonly>
                 <button onclick="copyIP()">Copy IP</button>
             </div>
             <p id="copy-alert" class="copy-alert"></p>
