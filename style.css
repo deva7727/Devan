@@ -45,6 +45,21 @@ header {
     transform: scale(1.1);
 }
 
+.animated-button1 {
+    padding: 15px 30px;
+    background-color: #8a2828;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-button1:hover {
+    background-color: #00a015;
+    transform: scale(1.1);
+}
 /* About Section */
 #about {
     padding: 50px;
