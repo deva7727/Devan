@@ -6,79 +6,82 @@
     <title>DMB PLAYS Minecraft Server</title>
     <style>
         body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #636363;
-}
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #636363;
+        }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #acacac;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(73, 73, 73, 0.2);
-    padding: 30px;
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #acacac;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(73, 73, 73, 0.2);
+            padding: 30px;
+        }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-h1 {
-    color: #000000;
-}
+        h1 {
+            color: #000000;
+        }
 
-h2 {
-    color: #000000;
-}
+        h2 {
+            color: #000000;
+        }
 
-.server-info, .join-instructions {
-    margin-bottom: 30px;
-}
+        .server-info, .join-instructions {
+            margin-bottom: 30px;
+        }
 
-.ip-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .ip-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px; /* Added margin for spacing */
+        }
 
-.ip-label {
-    margin-right: 10px;
-}
+        .ip-label {
+            margin-right: 10px;
+            font-weight: bold; /* Make the label bold */
+        }
 
-input[type="text"] {
-    padding: 10px;
-    border: 1px solid #00796b;
-    border-radius: 5px;
-    flex: 1;
-}
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+            flex: 1;
+            background-color: #fff; /* Make input background white for better contrast */
+        }
 
-button {
-    padding: 10px 15px;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-}
+        button {
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #004d40;
-}
+        button:hover {
+            background-color: #004d40;
+        }
 
-ol {
-    line-height: 1.6;
-}
+        ol {
+            line-height: 1.6;
+            color: #000; /* Set color for list items */
+        }
 
-.copy-alert {
-    margin-top: 10px;
-    font-size: 16px;
-    display: inline-block; /* Ensure it displays correctly below the button */
-}
-
+        .copy-alert {
+            margin-top: 10px;
+            font-size: 16px;
+            display: inline-block; /* Ensure it displays correctly below the button */
+        }
     </style>
 </head>
 <body>
@@ -91,36 +94,57 @@ ol {
         <section class="server-info">
             <h2>Server Information</h2>
             <div class="ip-container">
-                <p class="ip-label"> JAVA Server IP:</p>
-                <input type="text" id="server-ip" value="mc.dmbplays.me:25456" readonly>
-                <button onclick="copyIP()">Copy IP</button>
+                <p class="ip-label">JAVA Server IP:</p>
+                <input type="text" id="java-server-ip" value="mc.dmbplays.me:25456" readonly>
+                <button onclick="copyIP('java-server-ip')">Copy IP</button>
             </div>
 
-             <div class="ip-container">
-                <p class="ip-label"> Bedrock/Pocket Server IP:</p>
-                <input type="text" id="server-ip" value="mc.dmbplays.me:2250" readonly>
-                <button onclick="copyIP()">Copy IP</button>
+            <div class="ip-container">
+                <p class="ip-label">Bedrock/Pocket Server IP:</p>
+                <input type="text" id="bedrock-server-ip" value="mc.dmbplays.me:2250" readonly>
+                <button onclick="copyIP('bedrock-server-ip')">Copy IP</button>
             </div>
             <p id="copy-alert" class="copy-alert"></p>
         </section>
 
         <section class="join-instructions">
             <h2>How to Join the Server</h2>
-            <ol>
-                <li>Open Minecraft and log in to your account.</li>
-                <li>Click on the "Multiplayer" option in the main menu.</li>
-                <li>Click on the "Add Server" button.</li>
-                <li>In the "Server Name" field, enter any name you prefer (e.g., DMB PLAYS).</li>
-                <li>In the "Server Address" field, enter: <strong>mc.dmbplays.me:25456</strong>.</li>
-                <li>Click "Done" to save the server information.</li>
-                <li>Find the server in your server list and click "Join Server"!</li>
-            </ol>
+        
+            <div>
+                <h3>For Java Edition</h3>
+                <ol>
+                    <li>Open Minecraft and log in to your account.</li>
+                    <li>Click on the "Multiplayer" option in the main menu.</li>
+                    <li>Click on the "Add Server" button.</li>
+                    <li>In the "Server Name" field, enter any name you prefer (e.g., DMB PLAYS).</li>
+                    <li>In the "Server Address" field, enter: <strong>mc.dmbplays.me</strong>.</li>
+                    <li>In the "Port" field, enter: <strong>25456</strong>.</li>
+                    <li>Click "Done" to save the server information.</li>
+                    <li>Find the server in your server list and click "Join Server"!</li>
+                </ol>
+            </div>
+        
+            <div>
+                <h3>For Bedrock/Pocket Edition</h3>
+                <ol>
+                    <li>Open Minecraft and log in to your account.</li>
+                    <li>Click on the "Play" button.</li>
+                    <li>Go to the "Servers" tab.</li>
+                    <li>Scroll down and click on "Add Server".</li>
+                    <li>In the "Server Name" field, enter any name you prefer (e.g., DMB PLAYS).</li>
+                    <li>In the "Server Address" field, enter: <strong>mc.dmbplays.me</strong>.</li>
+                    <li>In the "Port" field, enter: <strong>2250</strong>.</li>
+                    <li>Click "Save" to save the server information.</li>
+                    <li>Find the server in your server list and click "Join Server"!</li>
+                </ol>
+            </div>
         </section>
+        
     </div>
 
     <script>
-        function copyIP() {
-            const ipInput = document.getElementById('server-ip');
+        function copyIP(id) {
+            const ipInput = document.getElementById(id);
             ipInput.select();
             document.execCommand('copy');
 
